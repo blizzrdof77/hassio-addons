@@ -39,13 +39,14 @@ You might want to start the transfer with a HASS automation
 
 ### [remote-backup]
 
-This addon is a fork of the great backup addon https://github.com/mr-bjerre/hassio-remote-backup of @mr-bjerre, which creates and manages snapshots and has a SCP function. It is enhanced so that it is also able to transfer the Hass.io folders /addons, /backup, /config, /share, /ssl and /media to a remote rsync server (e.g. a Synology NAS).
-The addon transfers the changes to the destination at every start. After the transfer it stops.
+This addon is a fork of the great backup addon https://github.com/overkill32/hassio-remote-backup of @overkill32, which *creates and manages* ***backups*** (formerly called **snapshots**) and has a SCP function. It is enhanced so that it is also able to transfer the Hass.io folders /addons, /backup, /config, /share, /ssl and /media to a remote rsync server (e.g. a Synology NAS).
 
-You might want to start the transfer with a HASS automation
+The addon transfers the changes to the destination every time the addon is started. After the transfer, the addon stops.
+
+You might want to start the transfer with an automation in Home Assistant. For example:
 ```
 - id: '7'
-  alias: Create snapshot & Folder sync to NAS
+  alias: Create backup & Folder sync to NAS
   trigger:
     platform: time
     at: '1:00:00'
