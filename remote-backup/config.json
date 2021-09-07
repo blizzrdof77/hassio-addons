@@ -1,9 +1,9 @@
 {
   "name": "Remote Backup",
-  "version": "4.3.1",
+  "version": "4.3.3",
   "slug": "remote_backup",
   "description": "Exploit backups and SCP/rsync to create remote backups to specified server",
-  "url": "https://github.com/carstenschroeder/hassio-addons/blob/master/README.md",
+  "url": "https://github.com/blizzrdof77/hassio-addons/blob/master/README.md",
   "startup": "once",
   "boot": "manual",
   "arch": [
